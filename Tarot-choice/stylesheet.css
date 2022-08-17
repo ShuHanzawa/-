@@ -1,0 +1,13 @@
+*{
+  margin:0;
+  padding:0;  
+  box-sizing: border-box;
+}
+
+.main {
+    font-size: 1.2rem;
+    width: 100vw;
+    height: 100vh;
+    background-color: linear-gradient(to bottom, rgb(255, 255, 255),rgb(255, 255, 255));
+    
+}
