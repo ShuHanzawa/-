@@ -1,0 +1,149 @@
+$theme-color: #1C0C5B;
+$theme-color2: #3D2C8D;
+$theme-color3: #916BBF;
+$theme-color4: #C996CC;
+
+
+.header{
+    width: 100%;
+    height: 60px;
+    background-color: #1C0C5B;
+    border-bottom: 2px solid #FFFFFF;
+        
+    .logo{
+        font-family: 'Zen Maru Gothic', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 52px;
+        color: #FFFFFF;
+        text-align: left;
+        width: 300px;
+        margin: 0%;
+        margin-left: 10%;
+    }
+    
+    .icon{
+    float: right;
+    margin-right: 10%;
+    margin-top: 0;
+    color: #FFFFFF;
+    box-sizing: border-box;
+    }
+
+    .gg-menu {
+        transform: scale(var(--ggs,1))
+    }
+    .gg-menu,
+    .gg-menu::after,
+    .gg-menu::before {
+        box-sizing: border-box;
+        margin-top: 0%;
+        position: relative;
+        display: block;
+        top: -20px;
+        width: 30px;
+        height: 3px;
+        border-radius: 3px;
+        background: currentColor
+    }
+    .gg-menu::after,
+    .gg-menu::before {
+        content: "";
+        position: absolute;
+        top: -8px;
+    }
+    .gg-menu::after {
+        top: 8px;
+    }
+}
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg, #1C0C5B 0%, rgba(145, 107, 191, 0.73) 100%);
+    padding-top: 10%;
+    h1 {
+        color: #FFFFFF;
+        box-sizing: border-box;
+        display:block;
+        margin: 0%;
+        text-align: center;
+        font-family: 'Zen Maru Gothic', sans-serif;
+        font-weight: 400;
+    }
+
+
+    .card{
+        width: 138px;
+        height: 195px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 5%;
+        box-sizing: border-box;
+        background: #773418;
+        border: 1px solid #442310;
+    }
+
+    .updown {
+        animation-name:updown1;   /* アニメーション名の指定 */
+        animation-delay:0s;   /* アニメーションの開始時間指定 */
+        animation-duration: 3s;   /* アニメーション動作時間の指定 */
+        animation-timing-function: ease-in-out;  /* アニメーションの動き指定（徐々に早く）*/
+        animation-iteration-count: infinite; 
+    }
+     
+    @keyframes updown1 {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    .run{
+        width: 270px;
+        height: 70px;
+        box-sizing: border-box;
+        display:block;
+        margin: 0 auto;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        text-align: center;
+        background: #C996CC;
+        color: #FFFFFF;
+        font-size: 28px;
+        font-family: 'Zen Maru Gothic', sans-serif;
+        border: none;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        transition: all 0.2s ease;
+    }
+
+    .run:hover {
+        transform: translateY(4px);/*下に動く*/
+        box-shadow: none;
+      }
+    }
+
+
+.footer{
+    width: 100%;
+    height: 60px;
+    background: #916BBF;
+    border-top: 2px solid #FFFFFF;
+
+    p{
+        font-family:  'Zen Maru Gothic', sans-serif;
+        color: #FFFFFF;
+        font-size: 24px;
+        line-height: 35px;
+        letter-spacing: 0.05em;
+        text-align: right;
+        padding-right: 20%;
+    }
+}
