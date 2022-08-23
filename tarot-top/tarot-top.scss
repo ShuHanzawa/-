@@ -3,6 +3,10 @@ $theme-color2: #3D2C8D;
 $theme-color3: #916BBF;
 $theme-color4: #C996CC;
 
+*{
+    margin:0;
+    padding:0;
+}
 
 .header{
     width: 100%;
@@ -15,20 +19,28 @@ $theme-color4: #C996CC;
         font-style: normal;
         font-weight: 400;
         font-size: 36px;
-        line-height: 52px;
+        line-height: 60px;
+        letter-spacing: 0.07em;
         color: #FFFFFF;
         text-align: left;
+        box-sizing: border-box;
         width: 300px;
-        margin: 0%;
         margin-left: 10%;
+        margin-right: 0%;
     }
     
     .icon{
     float: right;
     margin-right: 10%;
-    margin-top: 0;
+    /* border: 1px solid #FFFFFF; */
     color: #FFFFFF;
     box-sizing: border-box;
+    display: block;
+    line-height: 60px;
+    position: relative;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
     }
 
     .gg-menu {
@@ -41,20 +53,21 @@ $theme-color4: #C996CC;
         margin-top: 0%;
         position: relative;
         display: block;
-        top: -20px;
+        top: -25px;
         width: 30px;
         height: 3px;
         border-radius: 3px;
-        background: currentColor
+        background: currentColor;
+        line-height: 60px;
     }
     .gg-menu::after,
     .gg-menu::before {
         content: "";
         position: absolute;
-        top: -8px;
+        top: -10px;
     }
     .gg-menu::after {
-        top: 8px;
+        top: 10px;
     }
 }
 
@@ -62,7 +75,7 @@ $theme-color4: #C996CC;
     width: 100%;
     height: 100vh;
     background: linear-gradient(180deg, #1C0C5B 0%, rgba(145, 107, 191, 0.73) 100%);
-    padding-top: 10%;
+    padding-top: 10vh;
     h1 {
         color: #FFFFFF;
         box-sizing: border-box;
@@ -71,18 +84,17 @@ $theme-color4: #C996CC;
         text-align: center;
         font-family: 'Zen Maru Gothic', sans-serif;
         font-weight: 400;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
 
 
     .card{
-        width: 138px;
-        height: 195px;
         display: block;
         margin: 0 auto;
-        margin-top: 5%;
+        margin-top: 10vh;
         box-sizing: border-box;
-        background: #773418;
-        border: 1px solid #442310;
+        width: 135px;
+        height: 200px;
     }
 
     .updown {
@@ -111,8 +123,8 @@ $theme-color4: #C996CC;
         box-sizing: border-box;
         display:block;
         margin: 0 auto;
-        margin-top: 5%;
-        margin-bottom: 5%;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
         text-align: center;
         background: #C996CC;
         color: #FFFFFF;
@@ -128,12 +140,19 @@ $theme-color4: #C996CC;
         transform: translateY(4px);/*下に動く*/
         box-shadow: none;
       }
+
+    .result{
+        text-align: center;
+        color: #FFFFFF;
+        font-size: 24px;
+        padding-top: 5px;
+      }
     }
 
 
 .footer{
     width: 100%;
-    height: 60px;
+    height: 10vh;
     background: #916BBF;
     border-top: 2px solid #FFFFFF;
 
@@ -143,7 +162,8 @@ $theme-color4: #C996CC;
         font-size: 24px;
         line-height: 35px;
         letter-spacing: 0.05em;
+        margin: 1rem 0;
         text-align: right;
-        padding-right: 20%;
+        padding-right: 10%;
     }
 }
