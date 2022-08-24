@@ -13,6 +13,9 @@ $theme-color4: #C996CC;
     height: 60px;
     background-color: #1C0C5B;
     border-bottom: 2px solid #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
         
     .logo{
         font-family: 'Zen Maru Gothic', sans-serif;
@@ -28,54 +31,111 @@ $theme-color4: #C996CC;
         margin-left: 10%;
         margin-right: 0%;
     }
-    
-    .icon{
-    float: right;
-    margin-right: 10%;
-    /* border: 1px solid #FFFFFF; */
-    color: #FFFFFF;
-    box-sizing: border-box;
-    display: block;
-    line-height: 60px;
-    position: relative;
-    z-index: 2;
-    width: 50px;
-    height: 50px;
+
+    #menu {
+        position: relative;
+        float: right;
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+        background-color: #1C0C5B;
+        margin-right: 10%;
     }
 
-    .gg-menu {
-        transform: scale(var(--ggs,1))
-    }
-    .gg-menu,
-    .gg-menu::after,
-    .gg-menu::before {
+    span {
+        transform: scale(var(--ggs,1));
+        transition: all .4s;
         box-sizing: border-box;
         margin-top: 0%;
-        position: relative;
         display: block;
-        top: -25px;
+        top: 30px;
+        left: 6px;
         width: 30px;
         height: 3px;
         border-radius: 3px;
         background: currentColor;
         line-height: 60px;
+        color: #FFFFFF;
     }
-    .gg-menu::after,
-    .gg-menu::before {
-        content: "";
+    .bar1 {
         position: absolute;
-        top: -10px;
+        top: 20px;
     }
-    .gg-menu::after {
-        top: 10px;
+    .bar2{
+        position: absolute;
+        top: 30px;
+    }
+    .bar3 {
+        position: absolute;
+        top: 40px;
     }
 }
 
+#menu.active{
+    span{
+        top: 50px;
+        left: 6px;
+    }
+    .bar2{
+        opacity: 0;
+    }
+    
+    .bar1{
+        top: 21px;
+        transform: translateY(7px) rotate(-45deg);
+        width: 50%;
+    }
+    .bar3{
+        top: 35px;
+        transform: translateY(-7px) rotate(45deg);
+        width: 50%;
+    }
+}
+
+#menuContents{
+    width: 30%;
+    height: 100vh;
+    position: fixed;
+    background-color: #1c0c5bd7;
+    color: #FFFFFF;
+    font-style: normal;
+    margin: 0;
+    z-index: 1000;
+    top: 62px;
+    right: -100%;
+
+    p{
+        font-family: 'Zen Maru Gothic', sans-serif;
+        font-style: normal;
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 3vh;
+    }
+
+    ul li{
+        list-style: none;
+        font-family: 'Zen Maru Gothic', sans-serif;
+        font-style: normal;
+        text-align: center;
+        font-size: 18px;
+    }
+}
+
+#menuContents.active{
+    right: 0%;
+}
+
+
+
+
 .wrapper{
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     background: linear-gradient(180deg, #1C0C5B 0%, rgba(145, 107, 191, 0.73) 100%);
-    padding-top: 10vh;
+    padding-top: 20vh;
+    box-sizing: border-box;
+    
+
     h1 {
         color: #FFFFFF;
         box-sizing: border-box;
