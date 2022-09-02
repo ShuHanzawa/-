@@ -12,6 +12,7 @@ ul.baraja-container li {
 	height: 100%;
 	margin: 0;
 	position: absolute;
+	display: flex;
 	top: 0;
 	left: 0;
 	cursor: pointer;
@@ -22,7 +23,6 @@ ul.baraja-container li {
 	-ms-backface-visibility: hidden;
 	-o-backface-visibility: hidden;
 	backface-visibility: hidden;
-	opacity: 1;
 }
 ul.baraja-container a img {
 	opacity: 1;
@@ -33,7 +33,46 @@ ul.baraja-container a img {
 }
 ul.baraja-container li:hover{
 	opacity: .8;
+	/*うまくいかぬ
+	box-shadow: 0 0 20px 0 rgba(98, 97, 67, 0.159);
+	*/
 }
+ul.baraja-container li:active{
+	opacity: 1;
+
+}
+/* キラキラ部分 */
+/* キラキラが発生するアニメーション */
+@keyframes glitter {
+	0% {
+	  transform: scale(0);
+	  opacity: 0;
+	}
+  
+	50% {
+	  transform: scale(1);
+	  opacity: 1;
+	}
+  
+	100% {
+	  transform: scale(0);
+	  opacity: 0;
+	}
+  }
+
+.star {
+	position: absolute;
+	display: block;
+	width: 15px; /* キラキラの横幅を指定 */
+	height: 15px; /* キラキラの縦幅を指定 */
+	background-image: url("../images/star-yellow.png"); /* キラキラの画像のパスを記入 */
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	animation: glitter 1s;
+	pointer-events: none;
+}
+
 
 .no-js ul.baraja-container {
 	width: auto;
