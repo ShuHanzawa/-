@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/baraja.css" />
     <link rel="stylesheet" type="text/css" href="css/demo.css" />
-    <link rel="stylesheet" type="text/css" href="css/modal.css">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="js/modernizr.custom.79639.js"></script>
@@ -25,72 +24,59 @@
 
     <div class="main">
         
-        <div id="modal-overlay"></div>
-        <div id="modal-content">
-            <p>カードを一枚選択してね</p>
-            <p><a id="modal-close" class="button-link">進む</a></p>
-        </div>
+        <p>カードを一枚選択してね</p>
 
         <div class="baraja-demo">
             <ul id="baraja-el" class="baraja-container">
-                <li><img src="images/0.jpg" alt="image0"/></li>
-                <li><img src="images/0.jpg" alt="image0"/></li>
-                <li><img src="images/0.jpg" alt="image0"/></li>
-                <li><img src="images/0.jpg" alt="image0"/></li>
-                <li><img src="images/0.jpg" alt="image0"/></li>
-                <li><img src="images/0.jpg" alt="image0"/></li>
-                <li><img src="images/0.jpg" alt="image0"/></li>
+                <li><a href="#"><img src="images/0.jpg" alt="image0"/></a></li>
+                <li><a href="#"><img src="images/0.jpg" alt="image0"/></a></li>
+                <li><a href="#"><img src="images/0.jpg" alt="image0"/></a></li>
+                <li><a href="#"><img src="images/0.jpg" alt="image0"/></a></li>
+                <li><a href="#"><img src="images/0.jpg" alt="image0"/></a></li>
+                <li><a href="#"><img src="images/0.jpg" alt="image0"/></a></li>
+                <li><a href="#"><img src="images/0.jpg" alt="image0"/></a></li>
             </ul>
         </div>
     </div>
     <script>
-        //センタリングをする関数////動作してない・・・
-        function centeringModalSyncer(){
+        $(function() {
+            // global
+	        var Modernizr = window.Modernizr;
 
-            //画面(ウィンドウ)の幅を取得し、変数[w]に格納
-            var w = $(window).width();
-
-            //画面(ウィンドウ)の高さを取得し、変数[h]に格納
-            var h = $(window).height();
-
-            //コンテンツ(#modal-content)の幅を取得し、変数[cw]に格納
-            var cw = $("#modal-content").outerWidth({margin:true});
-
-            //コンテンツ(#modal-content)の高さを取得し、変数[ch]に格納
-            var ch = $("#modal-content").outerHeight({margin:true});
-
-            //コンテンツ(#modal-content)を真ん中に配置するのに、左端から何ピクセル離せばいいか？を計算して、変数[pxleft]に格納
-            var pxleft = ((w - cw)/2);
-
-            //コンテンツ(#modal-content)を真ん中に配置するのに、上部から何ピクセル離せばいいか？を計算して、変数[pxtop]に格納
-            var pxtop = ((h - ch)/2);
-
-            //[#modal-content]のCSSに[left]の値(pxleft)を設定
-            $("#modal-content").css({"left": pxleft + "px"});
-
-            //[#modal-content]のCSSに[top]の値(pxtop)を設定
-            $("#modal-content").css({"top": pxtop + "px"});
-
-        }
-
-        $("#modal-overlay,#modal-close").unbind().click(function(){
-            //[#modal-overlay]、または[#modal-close]をクリックしたら起こる処理
-            $("#modal-content,#modal-overlay").fadeOut("slow",function(){
-                //フェードアウト後、[#modal-overlay]をHTML(DOM)上から削除
-                $("#modal-overlay").remove();
-
+            window.setTimeout(() => {
                 var $el = $( '#baraja-el' ),
-					baraja = $el.baraja();
+			    baraja = $el.baraja();
                 baraja.fan( {
-		    		speed : 500,
-					easing : 'ease-out',
-					range : 100,
-					direction : 'right',
-					origin : { x : 50, y : 200 },
-					center : true
-				} );
-            });
-        });
+                    
+                    // speed for opening/closing
+		    	    speed : 900,
+                    // easing for opening/closing
+				    easing : 'ease-out',
+                    // アイテムが持つ可能性のある角度の差/範囲
+                    // 例: range:90 と center:false を最初のアイテムに使用
+                    // 例: range:90 と center:false を最初のアイテムに使用
+                    // 例: range:90 と center:false を最初のアイテムに使用
+                    // そして最後の -45deg; どちらの場合も、差は 90 度
+				    range : 100,
+                    // これは最初のアイテムの位置を定義します
+                    // (右へ、左へ)
+                    // とその角度 (時計回り/反時計回り)
+				    direction : 'right',
+                    // 変換元:
+                    // 左の値を意味する minX と maxX を渡すこともできます
+                    // minX と maxX の間で変化します
+				    origin : { x : 50, y : 250 },
+                    // 各項目の追加翻訳
+				    translation : 0,
+                    // 変換後にカードを中央に配置する必要がある場合
+				    //適用されます
+				    center : true,
+                    // 最終的な変換に乱数を追加します
+				    scatter : false
+			    } );
+            }, 700);
+        })
+
     </script>
     
 </body>
