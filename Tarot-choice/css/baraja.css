@@ -33,9 +33,6 @@ ul.baraja-container a img {
 }
 ul.baraja-container li:hover{
 	opacity: .8;
-	/*うまくいかぬ
-	box-shadow: 0 0 20px 0 rgba(98, 97, 67, 0.159);
-	*/
 }
 ul.baraja-container li:active{
 	opacity: 1;
