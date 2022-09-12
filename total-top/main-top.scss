@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    font-family:'Zen Maru Gothic', sans-serif;
+}
+// 全てに対応させる
+html,body{
+    max-width:1690px;
+    width: 100%;
+    height: 100%;
+}
+//レスポンシブ用 
+$num:670px;
+
+
+
+/*-----基準の型container----*/
+.container{
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+/*----headerエリア----*/ 
+header{
+    background-color: #EDB7F4;
+    color: #ffffff;
+    border-bottom: 3px solid #ffffff;
+    height: 80px;
+    margin: 0;
+    width: 100%;
+}
+
+h1{
+    line-height: 40px;
+    font-style: normal;
+    width: 300px;
+    padding: 5px;
+    display: inline;
+    line-height: 95px;
+}
+
+// メニューバー(花房さんのコードをお借りしています)
+#menu {
+    position: relative;
+    float: right;
+    top:15px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    background-color: #EDB7F4;
+    margin-right: 10%;
+}
+
+span {
+    transform: scale(var(--ggs,1));
+    transition: all .4s;
+    box-sizing: border-box;
+    margin-top: 0%;
+    display: block;
+    top: 30px;
+    left: 6px;
+    width: 30px;
+    height: 3px;
+    border-radius: 3px;
+    background: currentColor;
+    line-height: 60px;
+    color: #FFFFFF;
+}
+.bar1 {
+    position: absolute;
+    top: 20px;
+}
+.bar2{
+    position: absolute;
+    top: 30px;
+}
+.bar3 {
+    position: absolute;
+    top: 40px;
+}
+
+#menu.active{
+span{
+    top: 50px;
+    left: 6px;
+}
+.bar2{
+    opacity: 0;
+}
+
+.bar1{
+    top: 21px;
+    transform: translateY(7px) rotate(-45deg);
+    width: 50%;
+}
+.bar3{
+    top: 35px;
+    transform: translateY(-7px) rotate(45deg);
+    width: 50%;
+}
+}
+
+#menuContents{
+width: 40%;
+height: 100vh;
+position: fixed;
+background-color: #EDB7F4;
+color: #FFFFFF;
+font-style: normal;
+margin: 0;
+z-index: 1000;
+right: -100%;
+
+p{
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-style: normal;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 3vh;
+}
+
+ul li{
+    list-style: none;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-style: normal;
+    text-align: center;
+    font-size: 18px;
+}
+}
+
+#menuContents.active{
+right: 0%;
+}
+
+
+/*-----mainエリア-----*/ 
+h3{
+    text-align: center;
+    padding: 50px;
+    margin: 20px;
+}
+.section-wrapper{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+        
+    section{
+            width: 40%;
+            padding: 10px;
+            margin: 20px;
+            .image{
+                display: flex;
+                width: 360px;
+                width: 100%;
+                height: 230px;
+                margin: 10px auto;
+                img{
+                    position: relative;
+                    object-fit: contain;
+                    width: 100%;
+                    height: 100%;
+                    padding-top: 20px;
+                }
+            }
+            // 説明文
+            .text{
+                display: none;
+                position: absolute;                
+                top: -60px;
+                left: 130px;
+            }
+            .text:before{
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                border: 15px solid transparent;
+                border-top: 15px solid #EDB7F4;
+                margin-left: -15px;
+            }
+
+            .button{
+                text-align: center;
+                width: 30%;
+                padding: 20px;
+                margin: 40px auto;
+                border-radius: 20px;
+                color:#ffffff;
+                box-shadow:  0px 4px 5px 0 rgba(0,0,0,0.25);
+                cursor: pointer;
+            }
+            .button:active{
+                position: relative;
+                top:4px;
+                box-shadow: none;
+            }
+            .pink{
+                background-color: #D644E2;
+            }
+            .blue{
+                background-color: #587BD6;
+            }
+        }
+}
+
+// タロット背景
+#tarot-wrapper{
+    background-color: rgba(237, 183, 244, 0.3);
+    box-shadow: 0 0 0 10px rgba(237, 183, 244, 0.3);//内枠のためのボックスシャドウ
+    border: 3px solid #ffffff;
+    position: relative;
+    display: inline-block;
+
+}
+
+// 星占い背景
+#horo-wrapper{
+    background-color: rgba(207, 241, 239, 0.3);
+    box-shadow: 0 0 0 10px rgba(207, 241, 239, 0.3);
+    border: 3px solid #ffffff;
+    position: relative;
+    display: inline-block;
+
+    .horo{
+        left: 110px;
+    }
+    .horo:before{
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        border: 15px solid transparent;
+        border-top: 15px solid #CFF1EF;
+        margin-left: -15px;
+    }
+}
+
+
+/*----footerエリア-----*/
+footer{
+    width: 100%;
+    height: 95px;
+    margin-bottom: 0;
+    text-align: right;
+    background-color: #CFF1EF;
+    div{    
+        line-height: 95px;
+        font-size: 25px;
+        color: #ffffff;
+    }
+}

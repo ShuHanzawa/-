@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main-top.css">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <title>Fortuming</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Fortuming</h1>   
+                <div id="menu">
+                    <span class="bar1"></span>
+                    <span class="bar2"></span>
+                    <span class="bar3"></span>
+                </div>
+        </div>
+
+        <div id="menuContents">
+            <p>Menu</p>
+                <ul>
+                    <li>Horoscope is comming soon!</li>
+                </ul>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">       
+            <h3>2つの占いを楽しめるサイトです</h3>
+            <div class="section-wrapper">
+                <!-- タロット占いエリア --> 
+                    <section id="tarot-wrapper">
+                        <p class="text tarot">タロットカードで運勢を占います</p>
+                            <div class="image">
+                                <img src="./images/tarot-top.png" alt="">
+                            </div>
+                        <div class="button pink">タロットで占う</div>
+                    </section>
+            
+                <!-- 星占いエリア -->
+                <section id="horo-wrapper">
+                    <p class="text horo">星座・血液型・干支で運勢を占います</p>
+                    <div class="image">
+                        <img src="#" alt="">
+                    </div>
+                    <div class="button blue">星占いをする</div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div>Powered by Dreamcareer</div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="crossorigin="anonymous"></script>
+<script>
+// メニューバー
+$("#menu").click(function(){
+        $(this).toggleClass('active');
+        $("#menuContents").toggleClass('active');
+    });
+    
+$(function(){
+    //タロット　ホバーアクション
+    $("#tarot-wrapper").hover(function(){
+        $(".tarot").show();
+    },function(){
+    $('.tarot').hide();
+    });
+    // 星占い　ホバーアクション
+    $("#horo-wrapper").hover(function(){
+        $('.horo').show();
+    },function(){
+        $('.horo').hide();
+    });
+});
+</script>
+</body>
+</html>
