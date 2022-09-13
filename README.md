@@ -2,8 +2,7 @@
 
 ## 開発環境構築手順
 
-1.  cd fortuming
-    npm install を実行する
+1.  cd fortuming　と　npm install を実行する
 
 ```sh
 $ cd fortuming
