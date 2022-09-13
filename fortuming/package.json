@@ -1,0 +1,24 @@
+{
+  "name": "t-test",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon -e ejs,js,json ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.6",
+    "debug": "~4.3.4",
+    "ejs": "^3.1.8",
+    "express": "~4.18.1",
+    "http-errors": "~2.0.0",
+    "jade": "^0.29.0",
+    "morgan": "~1.10.0",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.19"
+  },
+  "main": "app.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

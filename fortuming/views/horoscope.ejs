@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星占い</title>
+</head>
+<body>
+    <form id="deta">
+        <select title="stars" id="stars" name="stars">
+            <option value="11">おひつじ座</option>
+            <option value="12">おうし座</option>
+            <option value="13">ふたご座</option>
+            <option value="14">かに座</option>
+            <option value="15">しし座</option>
+            <option value="16">おとめ座</option>
+            <option value="17">てんびん座</option>
+            <option value="18">さそり座</option>
+            <option value="19">いて座</option>
+            <option value="20">やぎ座</option>
+            <option value="21">みずがめ座</option>
+            <option value="22">うお座</option>
+        </select>
+
+        <select title="blood" id="blood" name="blood">
+            <option value="1">A型</option>
+            <option value="2">B型</option>
+            <option value="3">O型</option>
+            <option value="4">AB型</option>
+            <option value="5">わからない</option>
+        </select>
+    </form>
+
+    <button id="run" onclick="horoscorpe()">占う</button>
+    </form>
+
+    <h1>今日のあなたの運勢は<span id="result"></span></h1>
+    <p>ラッキーカラーは<span id="color"></span></p>
+    <p>ラッキーアイテムは<span id="item"></span></p>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+
+        function horoscorpe() {
+            const requestData = {
+            star: $("#deta select[name=stars]").val(),
+            blood: $("#deta select[name=blood]").val()
+          };
+
+          // 日付を xxxx-xx-xx　に変換
+        const date = new Date();
+        const month = Number(("0" + (date.getMonth() +1)).slice(-2));
+        const day = Number(("0" + (date.getDate() )).slice(-2));
+        const yydd = (month + day);
+
+
+          let colors = ["赤","青","黄色","緑","紫","オレンジ","白","黒","グレー"];
+          let items = ["ボールペン","ハンカチ","ティッシュ","メモ帳","イヤホン"]
+          const color = Math.floor( Math.random() * colors.length );
+          const item = Math.floor( Math.random() * items.length );
+
+          const result = (Number(requestData.star) + Number(requestData.blood) + yydd) % 5;
+          console.log(result);
+        
+        switch (result){
+            case 0: $("#result").text("絶好調！");
+                break;
+            case 1: $("#result").text("よい");
+                break;
+            case 2: $("#result").text("普通");
+                break;
+            case 3: $("#result").text("まずまず");
+                break;
+            case 4: $("#result").text("よくないかも");
+                break;
+        };
+
+        console.log(color);
+        console.log(item);
+
+        console.log(colors[color]);
+        console.log(items[item]);
+        
+        $("#color").text(colors[color]);
+        $("#item").text(items[item]);
+          
+
+        };
+
+
+    </script>
+
+</body>
+
+</html>

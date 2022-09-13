@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/tarot-top.css">
+    <link href='https://css.gg/menu.css' rel='stylesheet'>
+    <title>タロット占い</title>
+</head>
+<body>
+    <div class="header">
+        <p class="logo"><a href="http://localhost:3001/">Fortuming</a></p>
+        <div id="menu">
+            <span class="bar1"></span>
+            <span class="bar2"></span>
+            <span class="bar3"></span>
+        </div>
+    </div>
+
+    <div id="menuContents">
+        <p>Menu</p>
+            <ul>
+                <li><a href="http://localhost:3001/">トップ</a></li>
+                <li><a href="http://localhost:3001/tarot/">星占い</a></li>
+            </ul>
+    </div>
+
+
+
+    <div class="wrapper">
+        <h1>タロット占い</h1>
+        <img class="card updown" src="/images/tarotCard.PNG">
+        <br>
+        <button class="run" onclick="location.href='http://localhost:3001/tarot/choice'">占う</button>        
+    </div>
+
+    
+    <div class="footer">
+        <p>Powered by Dreamcareer</p>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+
+        $("#menu").click(function(){
+            $(this).toggleClass('active');
+            $("#menuContents").toggleClass('active');
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+*{
+    margin:0;
+    padding:0;  
+  }
+  
+  .main {
+      font-size: 1.2rem;
+      color: #fff;
+      text-align: center;
+      font-family: "Zen Maru Gothic", sans-serif;
+  }
+
+.baraja-demo{
+  box-sizing: border-box;  
+}
+
+
+  .js-glitter{
+    height: 35vh;
+  }
