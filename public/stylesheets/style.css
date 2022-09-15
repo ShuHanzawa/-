@@ -1,0 +1,175 @@
+@charset "utf-8";
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.header-wrapper {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1C0C5B;
+    border-bottom: 2px solid white;
+}
+
+ .header-wrapper h1 {
+    padding: 10px 50px;
+    text-align: left;
+    color: white;
+}
+
+.menu-icon {
+    padding: 10px 50px;
+    text-align: right;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+
+.header-wrapper-2 {
+    background-color: #1C0C5B;
+    width: 200px;
+    height: 100%;
+    float: right;
+}
+
+.uranai-list a {
+    color: white;
+    display: block;
+    /*padding: 16px 24px;
+    cursor: pointer;*/
+}
+
+.uranai-list a:hover {
+    background-color: #2B306D;
+}
+
+.tarot-body {
+    /*position: absolute;
+    width: 1608px;
+    height: 961px;*/
+    width: 100%;
+    height: 961px;
+    background: linear-gradient(180deg, #1C0C5B 0%, rgba(145, 107, 191, 0.73) 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);   
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.tarot-card {
+    padding: 100px 0;
+    text-align: center;
+    animation-name:updown;   /* アニメーション名の指定 */
+    animation-delay:0s;   /* アニメーションの開始時間指定 */
+    animation-duration: 3s;   /* アニメーション動作時間の指定 */
+    animation-timing-function: ease-in-out;  /* アニメーションの動き指定（徐々に早く）*/
+    animation-iteration-count: infinite; 
+}
+
+.card {
+    height: 200px;
+    width: 135px;
+}
+
+@keyframes updown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+.btn-fortun {
+    margin-bottom: 100px;
+}
+
+.btn {
+    padding: 8px 24px;
+    color: white;
+    display: inline-block;
+    border-radius: 5px;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+  
+
+.start {
+    width: 300px;
+    font-size: 40px;
+    background-color: #e4bccc;
+    cursor: pointer;
+    box-shadow: 0 7px #cba6ad;
+    animation-name:dokidoki;	/* アニメーション名の指定 */
+    animation-delay:0s;		/* アニメーションの開始時間指定 */
+    animation-duration: 3s;	/* アニメーション動作時間の指定 */
+    animation-timing-function: ease-in-out;
+    /* アニメーションの動き（徐々に早く徐々に遅く）*/
+    animation-iteration-count: infinite; /* アニメーションをループさせる */
+}
+
+@keyframes dokidoki {
+    0% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    60% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.start:active{
+    position: relative;
+    top: 7px;
+    box-shadow: none;
+}
+
+footer {
+    background-color: #ae92d0;
+    height: 40px;
+    width: 100%;
+    text-align: right;
+    align-items: center;
+    border-top: 2px solid white;
+    /*z-index: 10;*/
+}
+
+p {
+    margin: 0px;
+    padding: 10px;
+    color: white;
+    
+}
+
+

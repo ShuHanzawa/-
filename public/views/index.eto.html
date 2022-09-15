@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheets/eto/style-hs-eto.css">
+    <link href='https://css.gg/menu.css' rel='stylesheet'>
+    <title>星座占い</title>
+</head>
+<body>
+    <div class="header">
+        <p class="logo">Fortuming</p>
+        <div id="menu">
+            <span class="bar1"></span>
+            <span class="bar2"></span>
+            <span class="bar3"></span>
+        </div>
+    </div>
+
+    <div id="menuContents">
+        <p>Menu</p>
+            <ul>
+                <li>タロット占い</li>
+            </ul>
+    </div>
+
+
+    <div class="wrapper">
+        <!--<h1>星座占い</h1>-->
+        <h2>干支を選んでください</h2>
+        <form>
+            <div class="etos">
+                <div class="eto">
+                    <label>
+                        <input type="radio" name="eto" value="1" class="radio"><img src="../../images/eto_mark01_nezumi.png" class="radio_image">
+                        <p>ねずみ</p>
+                    </label>
+                </div>
+                <div class="eto">
+                    <label>
+                        <input type="radio" name="eto" value="2" class="radio"><img src="../../images/eto_mark02_ushi.png" class="radio_image">
+                        <p>うし</p>
+                    </label>
+                </div>
+                <div class="eto">
+                    <label>
+                        <input type="radio" name="eto" value="3" class="radio"><img src="../../images/eto_mark03_tora.png" class="radio_image">
+                        <p>とら</p>
+                    </label>
+                </div>
+                <div class="eto">
+                    <label>
+                        <input type="radio" name="eto" value="4" class="radio"><img src="../../images/eto_mark04_usagi.png" class="radio_image">
+                        <p>うさぎ</p>
+                    </label>
+                </div>
+                <div class="eto">
+                    <label>
+                        <input type="radio" name="eto" value="5" class="radio"><img src="../../images/eto_mark05_tatsu.png" class="radio_image">
+                        <p>たつ</p>
+                    </label>
+                </div>
+                <div class="eto">
+                    <label>
+                        <input type="radio" name="eto" value="6" class="radio"><img src="../../images/eto_mark06_hebi.png" class="radio_image">
+                        <p>へび</p>
+                    </label>
+                </div>
+                <br>
+                <div class="eto">
+                    <label>
+                        <input type="radio" name="eto" value="7" class="radio"><img src="../../images/eto_mark07_uma.png" class="radio_image">
+                        <p>うま</p>
+                    </label>
+                </div>
+                <div class="eto">
+                    <label>
+                        <input type="radio" name="eto" value="8" class="radio"><img src="../../images/eto_mark08_hitsuji.png" class="radio_image">
+                        <p>ひつじ</p>
+                    </label>
+                </div>
+                <div class="eto">
+                    <label>
+                        <input type="radio" name="eto" value="9" class="radio"><img src="../../images/eto_mark09_saru.png" class="radio_image">
+                        <p>さる</p>
+                    </label>
+                </div>
+                <div class="eto">
+                    <label>
+                        <input type="radio" name="eto" value="10" class="radio"><img src="../../images/eto_mark10_tori.png" class="radio_image">
+                        <p>とり</p>
+                    </label>
+                </div>
+                <div class="eto">
+                    <label>
+                        <input type="radio" name="eto" value="11" class="radio"><img src="../../images/eto_mark11_inu.png" class="radio_image">
+                        <p>いぬ</p>
+                    </label>
+                </div>
+                <div class="eto">
+                    <label>
+                        <input type="radio" name="eto" value="12" class="radio"><img src="../../images/eto_mark12_inoshishi.png" class="radio_image">
+                        <p>いのしし</p>
+                    </label>
+                </div>
+            </div>
+        </form>
+        <div class="btns">
+            <button class="btn return" onclick="location.href='index.blood.html'">戻る</button>
+            <button class="btn result" onclick="location.href='#'">占う</button>
+        </div>
+    </div>
+
+    
+    <div class="footer">
+        <p>Powered by Dreamcareer</p>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+
+        $("#menu").click(function(){
+            $(this).toggleClass('active');
+            $("#menuContents").toggleClass('active');
+        });
+
+    </script>
+</body>
+</html>

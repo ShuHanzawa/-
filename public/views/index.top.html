@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheets/top/style-hs-top.css">
+    <link href='https://css.gg/menu.css' rel='stylesheet'>
+    <title>星座占い</title>
+</head>
+<body>
+    <div class="header">
+        <p class="logo">Fortuming</p>
+        <div id="menu">
+            <span class="bar1"></span>
+            <span class="bar2"></span>
+            <span class="bar3"></span>
+        </div>
+    </div>
+
+    <div id="menuContents">
+        <p>Menu</p>
+            <ul>
+                <li>タロット占い</li>
+            </ul>
+    </div>
+
+
+    <div class="wrapper">
+        <h1>星座占い</h1>
+        <h2>星座を選んでください</h2>
+        <form>
+            <div class="hrss">
+                <div class="hrs"> 
+                    <label>
+                        <input type="radio" name="horoscope" value="1" class="radio"><img src="../../images/sheep.jpg" class="radio_image">
+                        <p>おひつじ座</p>
+                    </label>
+                </div>    
+                <div class="hrs"> 
+                    <label>
+                        <input type="radio" name="horoscope" value="2" class="radio"><img src="../../images/cow.jpg" class="radio_image">
+                        <p>おうし座</p>
+                    </label>
+                </div>
+                <div class="hrs"> 
+                    <label>
+                        <input type="radio" name="horoscope" value="3" class="radio"><img src="../../images/twinkle.jpg" class="radio_image">
+                        <p>ふたご座</p>
+                    </label>
+                </div>
+                <div class="hrs"> 
+                    <label>
+                        <input type="radio" name="horoscope" value="4" class="radio"><img src="../../images/kani.jpg" class="radio_image">
+                        <p>かに座</p>
+                    </label>
+                </div>
+                <div class="hrs"> 
+                    <label>
+                        <input type="radio" name="horoscope" value="5" class="radio"><img src="../../images/lion.jpg" class="radio_image">
+                        <p>しし座</p>
+                    </label>
+                </div>
+                <div class="hrs"> 
+                    <label>
+                        <input type="radio" name="horoscope" value="6" class="radio"><img src="../../images/otome.jpg" class="radio_image">
+                        <p>おとめ座</p>
+                    </label>
+                </div>
+                <br>
+                <div class="hrs"> 
+                    <label>
+                        <input type="radio" name="horoscope" value="7" class="radio"><img src="../../images/libra.jpg" class="radio_image">
+                        <p>てんびん座</p>
+                    </label>
+                </div>
+                <div class="hrs"> 
+                    <label>
+                        <input type="radio" name="horoscope" value="8" class="radio"><img src="../../images/sasori.jpg" class="radio_image">
+                        <p>さそり座</p>
+                    </label>
+                </div>
+                <div class="hrs"> 
+                    <label>
+                        <input type="radio" name="horoscope" value="9" class="radio"><img src="../../images/ite.jpg" class="radio_image">
+                        <p>いて座</p>
+                    </label>
+                </div>
+                <div class="hrs"> 
+                    <label>
+                        <input type="radio" name="horoscope" value="10" class="radio"><img src="../../images/yagi.jpg" class="radio_image">
+                        <p>やぎ座</p>
+                    </label>
+                </div>
+                <div class="hrs"> 
+                    <label>
+                        <input type="radio" name="horoscope" value="11" class="radio"><img src="../../images/mizugame.jpg" class="radio_image">
+                        <p>みずがめ座</p>
+                    </label>
+                </div>
+                <div class="hrs"> 
+                    <label>
+                        <input type="radio" name="horoscope" value="12" class="radio"><img src="../../images/fish.jpg" class="radio_image">
+                        <p>うお座</p>
+                    </label>
+                </div>
+            </div>
+        </form>
+        <div class="btn">
+            <button class="next" onclick="location.href='index.blood.html'">次へ</button>
+        </div>
+    </div>
+
+    
+    <div class="footer">
+        <p>Powered by Dreamcareer</p>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+
+        $("#menu").click(function(){
+            $(this).toggleClass('active');
+            $("#menuContents").toggleClass('active');
+        });
+
+    </script>
+</body>
+</html>
