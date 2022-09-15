@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
-    <link rel="stylesheet" href="/stylesheets/total-top.css">
+    <link rel="stylesheet" href="../public/stylesheets/total-top.css">
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
     <title>Fortuming</title>
 </head>
@@ -17,7 +17,6 @@
                     <span class="bar2"></span>
                     <span class="bar3"></span>
                 </div>
-
         <div id="menuContents">
             <p>Menu</p>
                 <ul>
@@ -30,28 +29,39 @@
     
     <main>
         <h3>2つの占いを楽しめるサイトです</h3>
-        <div class="container">       
-            
+  
             <div class="section-wrapper">
-                <!-- タロット占いエリア --> 
-                    <section id="tarot-wrapper">
-                        <p class="text tarot">タロットカードで運勢を占います</p>
-                            <div class="image">
-                                <img src="/images/tarot-top.png" alt="">
-                            </div>
-                        <div class="button pink" onclick="location.href='http://localhost:3001/tarot/'">タロットで占う</div>
-                    </section>
-            
-                <!-- 星占いエリア -->
-                <section id="horo-wrapper">
-                    <p class="text horo">星座・血液型・干支で運勢を占います</p>
-                    <div class="image">
-                        <img src="#" alt="">
+                <!-- タロット占いエリア -->         
+                <div class="freim">
+                    <div class="text-area">
+                        <div class="hover-action tarot">
+                            <p class="text tarot">タロットカードで運勢を占います</p>
+                            <p class="mark-pink"></p> 
+                        </div>
+                    </div>   
+                        <section id="tarot-wrapper">
+                                <div class="image">
+                                    <img src="/images/tarot-top.png" alt="">
+                                </div>
+                            <div class="button pink" onclick="location.href='http://localhost:3001/tarot/'">タロットで占う</div>
+                        </section>
+                </div>
+                <!-- 星占いエリア --> 
+                <div class="freim">                  
+                    <div class="text-area">
+                        <div class="hover-action horo">
+                            <p class="text horo">星座・血液型・干支で運勢を占います</p>
+                            <p class="mark-blue"></p>
+                        </div>
                     </div>
-                    <div class="button blue">星占いをする</div>
-                </section>
+                    <section id="horo-wrapper">
+                        <div class="image">
+                            <img src="#" alt="">
+                        </div>
+                        <div class="button blue">星占いをする</div>
+                    </section>
+                </div>
             </div>
-        </div>
     </main>
 
     <footer>
@@ -66,9 +76,13 @@ $("#menu").click(function(){
         $("#menuContents").toggleClass('active');
     });
     
-$(function(){
-    //タロット　ホバーアクション
-    $("#tarot-wrapper").hover(function(){
+$(window).on('load resize', function(){
+    var w = $(window).width();
+    var x = 1000;
+    //if文で画面サイズごとの処理を分岐
+    if(w > x){
+        // 画面サイズが1000px以上の時の処理
+        $("#tarot-wrapper").hover(function(){
         $(".tarot").show();
     },function(){
     $('.tarot').hide();
@@ -79,6 +93,15 @@ $(function(){
     },function(){
         $('.horo').hide();
     });
+    }else{
+        // 1000px以下の処理 hoverを打ち消し
+        //常に文を表示する
+       $("#tarot-wrapper").off();
+       $(".tarot").show();
+       $('#horo-wrapper').off();
+       $(".horo").show();
+
+    };
 });
 
 </script>
