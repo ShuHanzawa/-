@@ -4,6 +4,45 @@
   padding: 0;
 }
 
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-family: "Zen Maru Gothic", sans-serif;
+  color: #FFFFFF;
+}
+
+h1 {
+  color: #FFFFFF;
+  box-sizing: border-box;
+  display: block;
+  margin: 0%;
+  text-align: center;
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 400;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+h2 {
+  color: #FFFFFF;
+  box-sizing: border-box;
+  display: block;
+  margin: 0%;
+  text-align: center;
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 300;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+label {
+  display: block;
+}
+
 .header {
   width: 100%;
   height: 60px;
@@ -95,14 +134,12 @@
   right: -100%;
 }
 #menuContents p {
-  font-family: "Zen Maru Gothic", sans-serif;
   font-style: normal;
   font-size: 28px;
   text-align: center;
   margin-bottom: 3vh;
 }
 #menuContents ul li {
-  list-style: none;
   font-family: "Zen Maru Gothic", sans-serif;
   font-style: normal;
   text-align: center;
@@ -123,42 +160,64 @@
   box-sizing: border-box;
 }
 .wrapper h1 {
-  color: #FFFFFF;
-  box-sizing: border-box;
-  display: block;
-  margin: 0%;
-  text-align: center;
-  font-family: "Zen Maru Gothic", sans-serif;
-  font-weight: 400;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  padding: 10px 0;
+  padding-top: 10px;
+}
+.wrapper .tab {
+  visibility: hidden;
+}
+.wrapper .tab li {
+  display: inline;
 }
 .wrapper h2 {
-  color: #FFFFFF;
-  box-sizing: border-box;
+  padding-bottom: 10px;
+}
+.wrapper .area {
+  display: none;
+  opacity: 0;
+}
+.wrapper .area.is-active {
   display: block;
-  margin: 0%;
-  text-align: center;
-  font-family: "Zen Maru Gothic", sans-serif;
-  font-weight: 300;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  padding: 10px 0;
+  opacity: 1;
+  -webkit-animation-name: displayAnime;
+          animation-name: displayAnime; /*ふわっと表示させるためのアニメーション*/
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes displayAnime {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes displayAnime {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .wrapper form {
   text-align: center;
 }
-.wrapper form .hrss {
+.wrapper form .bdp {
   display: inline;
   margin: 0 auto;
   vertical-align: middle;
 }
-.wrapper form .hrs {
+.wrapper form .bdc {
   display: inline-block;
   margin: 0 auto;
 }
-.wrapper form label {
-  display: block;
+.wrapper form .hrs-et {
   margin: 10px 30px;
+}
+.wrapper form .bld {
+  margin: 50px;
 }
 .wrapper form .radio {
   display: none;
@@ -169,30 +228,38 @@
   height: 120px;
   border-radius: 15px;
 }
-.wrapper form .radio_image .radio_image:hover {
+.wrapper form .radio_image:hover {
   transform: translateY(4px); /*下に動く*/
   box-shadow: none;
+}
+.wrapper form .bl {
+  width: 150px;
+  height: 165px;
 }
 .wrapper form .radio:checked + .radio_image {
   border: 3px #FFFFFF solid;
   border-radius: 20px;
 }
 .wrapper form p {
-  font-family: "Zen Maru Gothic", sans-serif;
-  color: #FFFFFF;
   font-size: 20px;
   text-align: center;
   padding-top: 10px;
 }
-.wrapper .btn {
+.wrapper form .btns {
   text-align: center;
-  margin-left: 385px;
 }
-.wrapper .btn .next {
+.wrapper form .btns li {
+  display: inline-block;
+  vertical-align: middle;
+}
+.wrapper form .btns li .btn {
+  display: block;
+  display: flex;
+  justify-content: center; /*左右中央揃え*/
+  align-items: center; /*上下中央揃え*/
   width: 120px;
   height: 60px;
   box-sizing: border-box;
-  display: inline-block;
   margin: 5px 0;
   text-align: center;
   background: #FAD17D;
@@ -204,9 +271,19 @@
   border-radius: 20px;
   transition: all 0.2s ease;
 }
-.wrapper .btn .next:hover {
+.wrapper form .btns li .btn:hover {
   transform: translateY(4px); /*下に動く*/
   box-shadow: none;
+}
+.wrapper form .btns li .next {
+  margin-left: 195px;
+}
+.wrapper form .btns li .half {
+  margin-left: 385px;
+}
+.wrapper form .btns li .return {
+  margin-right: 195px;
+  background: #FAE57D;
 }
 
 .footer {
@@ -218,8 +295,6 @@
   border-top: 2px solid #FFFFFF;
 }
 .footer p {
-  font-family: "Zen Maru Gothic", sans-serif;
-  color: #FFFFFF;
   font-size: 24px;
   line-height: 35px;
   letter-spacing: 0.05em;

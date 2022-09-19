@@ -10,6 +10,49 @@ $theme-color4: #430F58;
     padding:0;
 }
 
+ul {
+    list-style:none;
+  }
+
+  
+a {
+    text-decoration: none;
+}  
+
+p {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    color: #FFFFFF;
+}    
+
+h1 {
+    color: #FFFFFF;
+    box-sizing: border-box;
+    display:block;
+    margin: 0%;
+    text-align: center;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-weight: 400;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+h2 {
+    color: #FFFFFF;
+    box-sizing: border-box;
+    display:block;
+    margin: 0%;
+    text-align: center;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-weight: 300;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+label {
+    display: block;
+}
+
+
+
+
 .header{
     width: 100%;
     height: 60px;
@@ -107,7 +150,6 @@ $theme-color4: #430F58;
     right: -100%;
 
     p{
-        font-family: 'Zen Maru Gothic', sans-serif;
         font-style: normal;
         font-size: 28px;
         text-align: center;
@@ -115,7 +157,6 @@ $theme-color4: #430F58;
     }
 
     ul li{
-        list-style: none;
         font-family: 'Zen Maru Gothic', sans-serif;
         font-style: normal;
         text-align: center;
@@ -135,55 +176,76 @@ $theme-color4: #430F58;
     height: 581px;
     background: linear-gradient(180deg, #152B63 0%, #8E9FC9 100%);
     mix-blend-mode: normal;
-
-    
     position: relative;
     top: 62px;
     box-sizing: border-box;
 
+    
     h1 {
-        color: #FFFFFF;
-        box-sizing: border-box;
-        display:block;
-        margin: 0%;
-        text-align: center;
-        font-family: 'Zen Maru Gothic', sans-serif;
-        font-weight: 400;
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        padding: 10px 0;
+        padding-top: 10px;
     }
 
+    .tab {
+        visibility: hidden;
+
+        li {
+            display: inline;
+        }
+    }
+
+
+
     h2 {
-        color: #FFFFFF;
-        box-sizing: border-box;
-        display:block;
-        margin: 0%;
-        text-align: center;
-        font-family: 'Zen Maru Gothic', sans-serif;
-        font-weight: 300;
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        padding: 10px 0;
+        padding-bottom: 10px;
+    }
+    
+
+    .area{
+        display: none;
+        opacity: 0;
+
+        &.is-active{
+            display: block;
+            opacity: 1;
+            animation-name: displayAnime;/*ふわっと表示させるためのアニメーション*/
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes displayAnime{
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
     }
 
     
 
+
     form {
         text-align: center;
 
-        .hrss{
+        .bdp{
             display: inline;
             margin: 0 auto;
             vertical-align: middle;
         }
 
-        .hrs{
+        .bdc{
             display: inline-block;
             margin: 0 auto;
         }
 
-        label{
-            display: block;
+        .hrs-et{
             margin: 10px 30px;
+        }
+
+        .bld{
+            margin: 50px;
         }
 
         .radio {
@@ -196,10 +258,15 @@ $theme-color4: #430F58;
             height: 120px;
             border-radius: 15px;
 
-            .radio_image:hover {
+            &:hover {
                 transform: translateY(4px);/*下に動く*/
                 box-shadow: none;
             }
+        }
+
+        .bl{
+            width: 150px;
+            height: 165px; 
         }
     
         .radio:checked + .radio_image {
@@ -208,43 +275,65 @@ $theme-color4: #430F58;
         }
 
         p{
-            font-family:  'Zen Maru Gothic', sans-serif;
-            color: #FFFFFF;
             font-size: 20px;
             text-align: center;
             padding-top: 10px;
         }
+        
+        .btns{
+            text-align: center;
+    
+            li{
+                display: inline-block;
+                vertical-align: middle;
+                
+    
+                .btn{
+                    display: block;
+                    display: flex;
+                    justify-content: center; /*左右中央揃え*/
+                    align-items: center;     /*上下中央揃え*/
+                    width: 120px;
+                    height: 60px;
+                    box-sizing: border-box;
+                    margin: 5px 0;
+                    text-align: center;
+                    background: #FAD17D;
+                    color: #000000;
+                    font-size: 20px;
+                    font-family: 'Zen Maru Gothic', sans-serif;
+                    border: none;
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    border-radius: 20px;
+                    transition: all 0.2s ease;
+    
+                    &:hover {
+                        transform: translateY(4px);/*下に動く*/
+                        box-shadow: none;
+                    }
+    
+                }
+                
+                .next{
+                        margin-left: 195px;
+                }
 
+                .half{
+                    margin-left: 385px;
+                }
+            
+                .return{
+                    margin-right: 195px;
+                    background: #FAE57D;
+                }
+                
+            }
+    
+            
+    
+        } 
     }
 
-
-    .btn{
-        text-align: center;
-        margin-left: 385px;
-
-        .next{
-            width: 120px;
-            height: 60px;
-            box-sizing: border-box;
-            display:inline-block;
-            margin: 5px 0;
-            text-align: center;
-            background: #FAD17D;
-            color: #000000;
-            font-size: 20px;
-            font-family: 'Zen Maru Gothic', sans-serif;
-            border: none;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            border-radius: 20px;
-            transition: all 0.2s ease;
-        }
-
-        .next:hover {
-            transform: translateY(4px);/*下に動く*/
-            box-shadow: none;
-        }
-
-    } 
     
 }
 
@@ -257,8 +346,6 @@ $theme-color4: #430F58;
     border-top: 2px solid #FFFFFF;
 
     p{
-        font-family:  'Zen Maru Gothic', sans-serif;
-        color: #FFFFFF;
         font-size: 24px;
         line-height: 35px;
         letter-spacing: 0.05em;
