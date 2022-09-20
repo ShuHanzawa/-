@@ -20,6 +20,7 @@
   background-color: #152B63;
   border-bottom: 2px solid #FFFFFF;
   display: flex;
+  z-index: 10000;
   justify-content: space-between;
   position: fixed;
 }
@@ -150,6 +151,26 @@
   }
   .wrapper span{
     margin-left: 5vh;
+  }
+
+
+  .wrapper .btn {
+    width: 270px;
+    height: 70px;
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    text-align: center;
+    background: #FAE57D;
+    color: #000000;
+    font-size: 28px;
+    font-family: "Zen Maru Gothic", sans-serif;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    transition: all 0.2s ease;
   }
 
   .footer {
