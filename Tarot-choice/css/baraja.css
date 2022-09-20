@@ -31,8 +31,11 @@ ul.baraja-container a img {
 	transition: .3s ease-in-out;
 	*/
 }
+ul.baraja-container:hover li{
+	opacity: .5;
+}
 ul.baraja-container li:hover{
-	opacity: .8;
+	opacity: 1;
 }
 ul.baraja-container li:active{
 	opacity: 1;
@@ -87,7 +90,7 @@ ul.baraja-container li:active{
 
 /** ↓↓custom.css **/
 .baraja-demo {
-	width: 200px;
+	width: 135px;
 	margin: 30px auto;
 	color: #aaa;
 }

@@ -1,0 +1,66 @@
+/* タブレット向けレイアウト */
+@media (max-width: 1000px) {
+    ul.baraja-container li{
+        width: 80%;
+        height: 80%;
+    }
+    .baraja-demo {
+        width: 108px;
+    }
+    .main p{
+        font-size: 27px;
+    }
+}
+
+@media (max-width: 800px) {
+    ul.baraja-container li{
+        width: 60%;
+        height: 60%;
+    }
+    .baraja-demo {
+        width: 81px;
+    }
+    .main p{
+        font-size: 24px;
+    }
+}
+
+/* スマホ向けレイアウト */
+@media (max-width: 700px) {
+    ul.baraja-container li{
+        width: 50%;
+        height: 50%;
+    }
+    .baraja-demo {
+        width: 67.5px;
+    }
+    .main p{
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 600px) {
+    ul.baraja-container li{
+        width: 40%;
+        height: 40%;
+    }
+    .baraja-demo {
+        width: 54px;
+    }
+    .main p{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    ul.baraja-container li{
+        width: 30%;
+        height: 30%;
+    }
+    .baraja-demo {
+        width: 40.5px;
+    }
+    .main p{
+        font-size: 15px;
+    }
+}

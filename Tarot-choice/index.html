@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/baraja.css" />
-    <link rel="stylesheet" type="text/css" href="css/demo.css" />
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="js/modernizr.custom.79639.js"></script>
     <script src="js/jquery.baraja.js"></script>
@@ -14,17 +17,26 @@
 </head>
 <body>
     <header>
-        <div class="container">
-        <div class="header-left">
-            <h1>divinazione!</h1>
-        </div>
-        <div class="header-right"></div>
+        <div class="header">
+            <p class="logo">Fortuming</p>
+            <div id="menu">
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+                <span class="bar3"></span>
+            </div>
         </div>
     </header>
 
+    <div id="menuContents">
+        <p>Menu</p>
+            <ul>
+                <li>Horoscope is comming soon!</li>
+            </ul>
+    </div>
+
     <div class="main">
         
-        <p>カードを一枚選択してね</p>
+        <p>運命のカードを１枚選んでください</p>
 
         <div class="baraja-demo">
             <ul id="baraja-el" class="baraja-container">
@@ -37,7 +49,13 @@
                 <li><a href="#" class="js-glitter"><img src="images/0.jpg" alt="image0"/></a></li>
             </ul>
         </div>
+
     </div>
+
+        <div class="footer">
+            <p>Powered by Dreamcareer</p>
+        </div>
+    
     <script>
         $(function() {
             // global
@@ -113,6 +131,10 @@
             }, 1000);
             };
         })
+        $("#menu").click(function(){
+            $(this).toggleClass('active');
+            $("#menuContents").toggleClass('active');
+        });
     </script>
     
 </body>
