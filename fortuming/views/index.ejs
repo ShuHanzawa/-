@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
-    <link rel="stylesheet" href="../public/stylesheets/total-top.css">
+    <link rel="stylesheet" href="/stylesheets/total-top.css">
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
     <title>Fortuming</title>
 </head>
 <body>
     <header>
-            <h1><a href="http://localhost:3001/">Fortuming</a></h1>   
+            <h1><a href="index.ejs">Fortuming</a></h1>   
                 <div id="menu">
                     <span class="bar1"></span>
                     <span class="bar2"></span>
@@ -20,9 +20,9 @@
         <div id="menuContents">
             <p>Menu</p>
                 <ul>
-                    <li><a href="http://localhost:3001/">トップ</a></li>
-                    <li><a href="http://localhost:3001/tarot/">タロット占い</a></li>
-                    <li><a href="http://localhost:3001/horoscorp/">星占い</a></li>
+                    <li><a href="index.ejs">トップ</a></li>
+                    <li><a href="tarot-top.ejs">タロット占い</a></li>
+                    <li><a href="horoscopeTop.ejs">星占い</a></li>
                 </ul>
         </div>
     </header>
@@ -43,7 +43,7 @@
                                 <div class="image">
                                     <img src="/images/tarot-top.png" alt="">
                                 </div>
-                            <div class="button pink" onclick="location.href='http://localhost:3001/tarot/'">タロットで占う</div>
+                            <div class="button pink" onclick="location.href='tarot'">タロットで占う</div>
                         </section>
                 </div>
                 <!-- 星占いエリア --> 
@@ -58,7 +58,7 @@
                         <div class="image">
                             <img src="#" alt="">
                         </div>
-                        <div class="button blue">星占いをする</div>
+                        <div class="button blue" onclick="location.href='horoscope'">星占いをする</div>
                     </section>
                 </div>
             </div>

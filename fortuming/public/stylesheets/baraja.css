@@ -32,7 +32,7 @@ ul.baraja-container a img {
 	*/
 }
 ul.baraja-container li:hover{
-	opacity: .8;
+	opacity: .5;
 }
 ul.baraja-container li:active{
 	opacity: 1;
@@ -87,7 +87,7 @@ ul.baraja-container li:active{
 
 /** ↓↓custom.css **/
 .baraja-demo {
-	width: 200px;
+	width: 135px;
 	margin: 30px auto;
 	color: #aaa;
 }

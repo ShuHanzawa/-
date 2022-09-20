@@ -115,7 +115,8 @@
 }
 
 a{
-  text-decoration:none
+  text-decoration:none;
+  color: #FFFFFF;
 }
 
 a:visited {
@@ -229,5 +230,6 @@ a:visited {
   letter-spacing: 0.05em;
   margin: 0.5rem 0;
   text-align: right;
+  margin-top: 2vh;
   padding-right: 8%;
 }/*# sourceMappingURL=tarot-top.css.map */

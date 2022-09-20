@@ -302,13 +302,13 @@ footer {
   border-top: 2px solid #FFFFFF;
 }
 footer p {
-    font-family: "Zen Maru Gothic", sans-serif;
-    color: #FFFFFF;
-    font-size: 24px;
-    line-height: 35px;
-    letter-spacing: 0.05em;
-    margin: 0.5rem 0;
-    text-align: right;
-    margin-top: 2vh;
-    padding-right: 8%;
+  font-family: "Zen Maru Gothic", sans-serif;
+  color: #FFFFFF;
+  font-size: 20px;
+  line-height: 35px;
+  letter-spacing: 0.05em;
+  margin: 0.5rem 0;
+  text-align: right;
+  margin-top: 2vh;
+  padding-right: 8%;
 }/*# sourceMappingURL=main-top.css.map */
