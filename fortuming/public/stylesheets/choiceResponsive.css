@@ -36,6 +36,7 @@
     }
     .main p{
         font-size: 23px;
+        margin-bottom: 10vh;
     }
 }
 
@@ -48,19 +49,21 @@
         width: 54px;
     }
     .main p{
-        font-size: 20px;
+        font-size: 22px;
+        margin-bottom: 10vh;
     }
 }
 
 @media (max-width: 400px) {
     ul.baraja-container li{
-        width: 30%;
-        height: 30%;
+        width: 35%;
+        height: 35%;
     }
     .baraja-demo {
         width: 40.5px;
     }
     .main p{
-        font-size: 15px;
+        font-size: 22px;
+        margin-bottom: 10vh;
     }
 }

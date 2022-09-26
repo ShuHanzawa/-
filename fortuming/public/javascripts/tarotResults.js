@@ -23,7 +23,7 @@ const httpGet = async function (url) {
                 return `
             <div class="card">
                 <img id="image1a" src="/images/tarotCard.PNG" class="card-wrongside">
-                <img id="#image1b" class="card-rightside" src="/images/${item.name}.png">
+                <img id="#image1b" class="card-rightside" src="/images/${item.img}.png">
             </div>
             <div class="text">            
                 <h2 class="fadeIn1">${item.name}の正位置</h2>
@@ -31,7 +31,7 @@ const httpGet = async function (url) {
                     <h2>このカードの意味は‥‥</h2>
                         <p>${item.good}</p>
                     <div class="return-wrapper">
-                        <div class="return-button"><a onclick="location.href='tarot-top.ejs'">もう一度占う</a></div>
+                        <div class="return-button"><a onclick="location.href='/tarot'">もう一度占う</a></div>
                     </div>
                 </div>
             </div>
@@ -40,7 +40,7 @@ const httpGet = async function (url) {
                 return `
             <div class="card">
                 <img id="image1a" src="/images/tarotCard.PNG" class="card-wrongside">
-                <img id="#image1b" class="card-rightside bad" src="/images/${item.name}.png">
+                <img id="#image1b" class="card-rightside bad" src="/images/${item.img}.png">
             </div>
             <div class="text">            
                 <h2 class="fadeIn1">${item.name}の逆位置</h2>
@@ -48,7 +48,7 @@ const httpGet = async function (url) {
                     <h2>このカードの意味は‥‥</h2>
                         <p>${item.bad}</p>
                     <div class="return-wrapper">
-                        <div class="return-button"><a onclick="location.href='tarot-top.ejs'">もう一度占う</a></div>
+                        <div class="return-button"><a onclick="location.href='/tarot'">もう一度占う</a></div>
                     </div>
                 </div>
             </div>

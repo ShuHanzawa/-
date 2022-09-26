@@ -8,13 +8,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../public/stylesheets/tarot-top.css">
+    <link rel="stylesheet" href="stylesheets/tarot-top.css">
     <link href='https://css.gg/menu.css' rel='stylesheet'>
     <title>タロット占い</title>
 </head>
 <body>
     <div class="header">
-        <p class="logo"><a href="index.ejs">Fortuming</a></p>
+        <p class="logo"><a href="/">Fortuming</a></p>
         <div id="menu">
             <span class="bar1"></span>
             <span class="bar2"></span>
@@ -25,9 +25,9 @@
     <div id="menuContents">
         <p>Menu</p>
             <ul>
-                <li><a href="index.ejs">トップ</a></li>
-                <li><a href="tarot-top.ejs">タロット占い</a></li>
-                <li><a href="horoscorpTop.ejs">星占い</a></li>
+                <li><a href="/">トップ</a></li>
+                <li><a href="/tarot">タロット占い</a></li>
+                <li><a href="/horoscope">星占い</a></li>
             </ul>
     </div>
 
@@ -35,9 +35,9 @@
 
     <div class="wrapper">
         <h1>タロット占い</h1>
-        <img class="card updown" src="../public/images/tarotCard.PNG">
+        <img class="card updown" src="images/tarotCard.PNG">
         <br>
-        <button class="run" onclick="location.href='tarotChoice.ejs'">占う</button>        
+        <button class="run" onclick="location.href='/tarot/choice'">占う</button>        
     </div>
 
     
